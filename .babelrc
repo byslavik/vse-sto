@@ -5,12 +5,15 @@
   ],
   "plugins": [
     "add-module-exports",
+    "transform-object-rest-spread",
+    "object-values-to-object-keys",
     ["module-resolver", {
       "root": [""],
       "alias": {
-        "components": "./src/js/components",
-        "helpers": "./src/js/helpers",
-        "pages": "./src/js/pages"
+        "components": "./src/front/js/components",
+        "helpers": "./src/front/js/helpers",
+        "pages": "./src/front/js/pages",
+        "api": "./src/front/js/api"
       }
     }]
   ]

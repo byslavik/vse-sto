@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #e8e8e8;  
+}
+.wrapper {
+  margin: 0 auto;
+}
+
+a {
+  color: black;
+}

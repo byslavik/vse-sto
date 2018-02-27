@@ -59,7 +59,7 @@ HtmlWebpackPlugin.prototype.generateAssetTags = function (assets) {
 
 module.exports = {
 
-    context: helpers.root('src'),
+    context: helpers.root('src/front'),
 
     entry: './js/index',
 
@@ -92,7 +92,7 @@ module.exports = {
               loader: 'svg-inline-loader'
             },
             {
-              test: /\.(png|jpg|gif|eot|woff|woff2|ttf)$/,
+              test: /\.(png|jpg|gif|otf|eot|woff|woff2|ttf)$/,
               use: [
                 {
                   loader: 'file-loader',

@@ -6,12 +6,12 @@ const helpers = require('./helpers');
 module.exports = webpackMerge(commonConfig, {
   devtool: 'cheap-module-eval-source-map',
   entry: [
-              "webpack-dev-server/client?http://localhost:3000",// bundle the client for webpack-dev-server and connect to the provided endpoint
+              "webpack-dev-server/client?http://localhost:3005",// bundle the client for webpack-dev-server and connect to the provided endpoint
               './js/index'
             ],
 
   devServer: {
-      port: 3000,
+      port: 3005,
       publicPath:  "/",
       contentBase: helpers.root('public'),
       historyApiFallback: true

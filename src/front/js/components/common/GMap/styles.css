@@ -1,0 +1,10 @@
+#map {
+  height: 400px;
+}
+.map-wrapper {
+  padding-bottom: 10px;
+}
+.remove-markers {
+  display: inline-block;
+  margin-bottom: 20px;
+}

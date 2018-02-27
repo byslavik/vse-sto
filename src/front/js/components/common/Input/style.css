@@ -1,0 +1,6 @@
+.has-error label {
+  color: red;
+}
+.has-error .form-control {
+  border-color: red;
+}

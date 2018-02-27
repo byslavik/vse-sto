@@ -1,0 +1,8 @@
+.sto-item-list {
+  margin: 10px 0;
+  padding: 15px 0;
+  border-top: 2px solid #e2202c;
+}
+.sto-item-list a h3 {
+  color: black;
+}

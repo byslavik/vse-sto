@@ -1,0 +1,13 @@
+.nav-link {
+  margin-right: 10px;
+}
+.header {
+  background: #fff;
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #e2202c
+}
+.header .top-menu-item.nav-link {
+  padding-left: 10px;
+  padding-right: 10px;
+}
