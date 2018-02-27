@@ -1,0 +1,1 @@
+export const filterResults = word => dispatch => dispatch({ type: 'FILTER_RESULTS', payload: word })

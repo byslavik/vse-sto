@@ -9,6 +9,7 @@ const StoItemEditorForm = ({
     description,
     contacts,
     address,
+    logo,
     coordinates
   } = {},
   errors: {
@@ -29,6 +30,7 @@ const StoItemEditorForm = ({
         <Input error={ err_description } value={ description } type="textarea" onChange={ onInputChange } name="description" title="Описание" description="Опишите виды работ, производимые в данном СТО" />
         <Input error={ err_contacts } value={ contacts } type="textarea" onChange={ onInputChange } name="contacts" title="Контактная информация" description="Опишите как связаться со специалистами СТО" />
         <Input error={ err_address } value={ address } type="text" onChange={ onInputChange } name="address" title="Адрес" placeholder="Адрес" description="По какому адресу расположено СТО" />
+        <Input  value={ logo } type="text" onChange={ onInputChange } name="logo" title="Ссылка на логотип" placeholder="Логотип" description="Ссылка на логотип" />
         <div className="form-group">
           <GMap positions={ coordinates } allowDelete allowAdd onChange={ onMapChange } />
         </div>

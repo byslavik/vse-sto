@@ -3,7 +3,7 @@ import { compose, lifecycle, withProps } from 'recompose'
 import Main from './Main'
 import { getItems } from './actions'
 
-const mapStateToProps = ({ allItems: { items }, app: { isLogged }}) => ({ items, isLogged })
+const mapStateToProps = ({ app: { searchWord }, allItems: { items, filteredItems }, app: { isLogged }}) => ({ items, searchWord, filteredItems, isLogged })
 
 export default compose(
   connect(mapStateToProps, { getItems }),
@@ -14,7 +14,10 @@ export default compose(
       getItems()
     }
   }),
-  withProps(({ items = [] }) => ({
-    positions: items.reduce((positions, item) => [...positions, ...item.coordinates], [])
+  withProps(({ items = [], filteredItems = [], searchWord }) => ({
+    positions: items.reduce((positions, item) => [...positions, ...item.coordinates], []),
+    items: filteredItems.length ? filteredItems : items,
+    searchMessage: Boolean(searchWord) && !Boolean(filteredItems.length),
+    hightlight: Boolean(searchWord) && Boolean(filteredItems.length)
   }))
 )(Main)

@@ -8,7 +8,8 @@ const initialState = {
   loginForm: {
     username: '',
     password: ''
-  }
+  },
+  searchWord: ''
 }
 
 export const app = (state = initialState, { type, payload }) => {
@@ -27,6 +28,13 @@ export const app = (state = initialState, { type, payload }) => {
       return {
         ...state,
         alerts: []
+      }
+    }
+
+    case 'FILTER_RESULTS': {
+      return {
+        ...state,
+        searchWord: payload
       }
     }
 
