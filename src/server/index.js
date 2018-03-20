@@ -29,16 +29,12 @@ app.use(function(req, res, next) {
   
   next();
 });
-
+app.use(express.static('built'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(passport.initialize());
 app.use(cors())
-
-app.get('/', function(req, res) {
-  res.send('Page under construction.');
-});
 
 app.use('/api', api);
 
