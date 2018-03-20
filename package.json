@@ -1,7 +1,7 @@
 {
   "name": "vse-sto",
   "version": "1.0.0",
-  "description": "",
+  "description": "vse-sto app",
   "main": "src/server/index.js",
   "scripts": {
     "start:dev": "webpack-dev-server --inline --progress --port 3005",
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/byslavik/vse-sto.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "(ISC OR GPL-3.0)",
   "bugs": {
     "url": "https://github.com/byslavik/vse-sto/issues"
   },
@@ -28,6 +28,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "bluebird": "^3.4.7",
     "body-parser": "^1.18.2",
     "bootstrap": "^4.0.0",
     "connect-redis": "^3.3.3",
@@ -65,7 +66,8 @@
     "debug": "~2.6.0",
     "jade": "~1.11.0",
     "jsonwebtoken": "^7.3.0",
-    "passport-jwt": "^2.2.1"
+    "passport-jwt": "^2.2.1",
+    "q": "^1.4.1"
   },
   "engines": {
     "node": "7.1.0"
