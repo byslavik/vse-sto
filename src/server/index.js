@@ -6,6 +6,8 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var config = require('./config/database');
 var cors = require('cors');
+var AirbrakeClient = require('airbrake-js');
+var makeErrorHandler = require('airbrake-js/dist/instrumentation/express');
 
 mongoose.connect(config.database);
 var conn = mongoose.connection;
@@ -37,6 +39,13 @@ app.use(passport.initialize());
 app.use(cors())
 
 app.use('/api', api);
+
+var airbrake = new AirbrakeClient({
+  projectId: 176408,
+  projectKey: '5ae4a7d8962fd108a78865935769a691'
+});
+
+app.use(makeErrorHandler(airbrake));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
