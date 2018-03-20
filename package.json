@@ -2,12 +2,12 @@
   "name": "vse-sto",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server/index.js",
   "scripts": {
-    "start": "webpack-dev-server --inline --progress --port 3005",
-    "start:server": "node src/server/index.js",
+    "start:dev": "webpack-dev-server --inline --progress --port 3005",
+    "start": "node src/server/index.js",
     "build": "rimraf built && webpack --config config/webpack.prod.js --progress",
-    "start:prod": "npm run build && npm run start:server"
+    "start:prod": "npm run build && npm run start"
   },
   "repository": {
     "type": "git",
@@ -66,5 +66,9 @@
     "jade": "~1.11.0",
     "jsonwebtoken": "^7.3.0",
     "passport-jwt": "^2.2.1"
+  },
+  "engines": {
+    "node": "7.1.0",
+    "npm": "3.10.9"
   }
 }
