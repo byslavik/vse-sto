@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/byslavik/vse-sto#readme",
   "dependencies": {
-    "airbrake-js": "^1.0.7",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-add-module-exports": "^0.2.1",
