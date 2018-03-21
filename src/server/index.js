@@ -36,10 +36,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(passport.initialize());
 app.use(cors())
-app.use('/', function(req, res){
+app.use('/api', api);
+
+app.use('/*', function(req, res){
   res.sendFile('index.html', { root: './built' })
 })
-app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
