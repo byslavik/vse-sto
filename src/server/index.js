@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var config = require('./config/database');
 var cors = require('cors');
+var port = process.env.PORT || 8083;
 
 mongoose.connect(config.database);
 var conn = mongoose.connection;
@@ -35,7 +36,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(passport.initialize());
 app.use(cors())
-
+app.use('/', function(req, res){
+  res.sendFile('index.html', { root: './built' })
+})
 app.use('/api', api);
 
 // catch 404 and forward to error handler
@@ -56,6 +59,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(8080)
+app.listen(port)
 
 module.exports = app;
