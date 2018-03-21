@@ -1,5 +1,5 @@
 import { getCook } from 'helpers'
-const mainUrl = 'http://localhost:8080/api'
+const mainUrl = '/api'
 
 const request = ({ method, body, url, headers }) => fetch(`${mainUrl}/${url}`, { method, body: JSON.stringify(body),  headers: {
   'Accept': '/',

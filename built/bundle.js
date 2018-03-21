@@ -2257,7 +2257,7 @@ exports.registerHandler = exports.loginHandler = exports.delItem = exports.updat
 
 var _helpers = __webpack_require__(15);
 
-var mainUrl = 'http://localhost:8080/api';
+var mainUrl = '/api';
 
 var request = function request(_ref) {
   var method = _ref.method,
